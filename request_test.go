@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"context"
 	"fmt"
-	testhttp "gitee.com/menciis/shttp/testutils/http"
+	testhttp "github.com/iami317/shttp/testutils/http"
 	"github.com/stretchr/testify/require"
 	"net/http"
 	"strings"

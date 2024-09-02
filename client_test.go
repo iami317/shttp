@@ -2,7 +2,7 @@ package shttp
 
 import (
 	"context"
-	testhttp "gitee.com/menciis/shttp/testutils/http"
+	testhttp "github.com/iami317/shttp/testutils/http"
 	"github.com/stretchr/testify/require"
 	"golang.org/x/net/publicsuffix"
 	"net/http"
