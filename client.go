@@ -177,7 +177,6 @@ func (c *Client) Do(ctx context.Context, req *Request) (*Response, error) {
 		}
 		response.setReceivedAt()
 
-		//ResponseMiddleware
 		for _, f := range c.afterResponse {
 			if err = f(response, c); err != nil {
 				return nil, err
@@ -185,7 +184,6 @@ func (c *Client) Do(ctx context.Context, req *Request) (*Response, error) {
 		}
 		return response, nil
 	} else {
-		// request fail
 		finalErr := doErr
 		if retryErr != nil {
 			finalErr = retryErr
