@@ -4,7 +4,6 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"github.com/iami317/logx"
 	"github.com/iami317/shttp/xtls"
 	"golang.org/x/net/http2"
 	"golang.org/x/net/publicsuffix"
@@ -191,7 +190,7 @@ func (c *Client) Do(ctx context.Context, req *Request) (*Response, error) {
 		if retryErr != nil {
 			finalErr = retryErr
 		}
-		logx.Debugf("%s %s fail", req.GetMethod(), req.GetUrl().String())
+		//logx.Debugf("%s %s fail", req.GetMethod(), req.GetUrl().String())
 		return nil, fmt.Errorf("giving up connect to %s %s after %d attempt(s): %v",
 			req.RawRequest.Method, req.RawRequest.URL, req.attempt, finalErr)
 	}
