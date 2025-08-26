@@ -61,7 +61,7 @@ func readResponseBody(resp *Response, c *Client) error {
 	}
 	resp.Body = bodyBytes
 	defer func() {
-		fmt.Println("=========关闭 http")
+		fmt.Println("=========关闭 http", resp.GetUrl().String())
 		err = resp.RawResponse.Body.Close()
 		if err != nil {
 			fmt.Println("=======", err)
